@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
         minSdk 23
-        targetSdk 32
+        targetSdk 31
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -44,17 +44,17 @@ afterEvaluate {
     publishing {
         publications {
             maven(MavenPublication) {
-                groupId groupId
-                artifactId artifactId
-                version version
+                groupId "com.afzaln"
+                artifactId "android-tvprovider"
+                version "1.1.0-alpha01"
 
                 from components.release
 
                 artifact androidSourcesJar
 
                 pom {
-                    name = artifactId
-                    description = description
+                    name = "android-tvprovider"
+                    description = "description"
                 }
             }
         }
