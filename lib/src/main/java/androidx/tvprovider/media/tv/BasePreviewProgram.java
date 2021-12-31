@@ -37,10 +37,7 @@ import java.util.TimeZone;
 
 /**
  * Base class for derived classes that want to have common fields for preview programs.
- *
- * @hide
  */
-@RestrictTo(LIBRARY)
 @SuppressWarnings("unchecked")
 public abstract class BasePreviewProgram extends BaseProgram {
     /**
