@@ -42,7 +42,7 @@ task androidSourcesJar(type: Jar) {
 
 def artifactIdName = "android-tvprovider"
 def groupIdName = "com.afzaln"
-def versionName = "1.1.0-alpha01"
+def versionName = "1.1.0-alpha01-1.0.0"
 def description = "AndroidX TVProvider library with programs query support"
 
 afterEvaluate {
