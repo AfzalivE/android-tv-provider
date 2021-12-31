@@ -40,7 +40,6 @@ import java.lang.annotation.RetentionPolicy;
  * {@link TvContractCompat}.
  * @hide
  */
-@RestrictTo(LIBRARY)
 @SuppressWarnings("unchecked")
 public abstract class BaseProgram {
     /**
