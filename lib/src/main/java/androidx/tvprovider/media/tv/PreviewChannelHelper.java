@@ -206,7 +206,12 @@ public class PreviewChannelHelper {
         List<PreviewChannel> channels = new ArrayList<>();
         if (cursor != null && cursor.moveToFirst()) {
             do {
-                channels.add(PreviewChannel.fromCursor(cursor));
+                try {
+                    PreviewChannel previewChannel = PreviewChannel.fromCursor(cursor);
+                    channels.add(previewChannel);
+                } catch (IllegalStateException | NullPointerException ex) {
+                    Log.d(TAG, ex.getMessage());
+                }
             } while (cursor.moveToNext());
         }
         return channels;
