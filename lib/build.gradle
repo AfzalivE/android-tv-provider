@@ -40,21 +40,26 @@ task androidSourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
 }
 
+def artifactIdName = "android-tvprovider"
+def groupIdName = "com.afzaln"
+def versionName = "1.1.0-alpha01"
+def description = "AndroidX TVProvider library with programs query support"
+
 afterEvaluate {
     publishing {
         publications {
             maven(MavenPublication) {
-                groupId "com.afzaln"
-                artifactId "android-tvprovider"
-                version "1.1.0-alpha01"
+                groupId groupIdName
+                artifactId artifactIdName
+                version versionName
 
                 from components.release
 
                 artifact androidSourcesJar
 
                 pom {
-                    name = "android-tvprovider"
-                    description = "description"
+                    name = artifactId
+                    description = description
                 }
             }
         }
