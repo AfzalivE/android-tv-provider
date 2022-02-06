@@ -207,7 +207,7 @@ public final class WatchNextProgram extends BasePreviewProgram {
         return builder.build();
     }
 
-    private static String[] getProjection() {
+    static String[] getProjection() {
         String[] oColumns = new String[]{
                 WatchNextPrograms.COLUMN_WATCH_NEXT_TYPE,
                 WatchNextPrograms.COLUMN_LAST_ENGAGEMENT_TIME_UTC_MILLIS,
