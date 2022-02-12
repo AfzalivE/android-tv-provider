@@ -929,9 +929,7 @@ public final class TvContractCompat {
 
     /**
      * Common columns for the tables of preview programs.
-     * @hide
      */
-    @RestrictTo(LIBRARY_GROUP_PREFIX)
     public interface PreviewProgramColumns {
         /**
          * The program type for movie.
